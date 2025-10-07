@@ -1,0 +1,17 @@
+ /*
+	declare variable roll no, name, make1, mark2, mark3 and mark4
+	declare total and percentage
+
+	total = mark1+2+3+4
+	per = total/4
+
+	last you have to print roll no, name, all subject mark, per, total
+*/
+
+class main
+{
+	public static void main(String p[])
+	{
+		System.out.println("Marksheet")
+	}
+}

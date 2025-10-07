@@ -1,0 +1,11 @@
+// Final 
+/*
+Final Keyword
+Final Method
+Final Class
+*/
+
+
+	--> Final Keyword is use when you do not want to change the value
+	--> When the method or member function is declare final you cannot do method overriding.
+	--> When the class became final you cannot do inheritance 

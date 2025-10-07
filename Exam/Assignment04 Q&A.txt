@@ -1,0 +1,17 @@
+q2. explain different type of inheritance with diagram.
+
+q3. Explain static data member function, static keyword with example. 
+
+q4. Explain abstract class and methods of it's.
+
+q5. What is interface explain with example.
+
+q6. Different between Method Overloading & Method Overwriting.
+
+q7. Explain multilevel inheritance with example
+
+q8. What is super keyword demonstrate with example.
+
+q9. What is the final keyword final class and final method.
+
+q10. Demonstrate example of Hybrid Inheritance 

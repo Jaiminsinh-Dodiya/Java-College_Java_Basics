@@ -1,0 +1,120 @@
+// Types of Control Flow
+
+/*
+Conditional Statement
+Decision Making Statement
+Branching Statement
+*/ 
+
+
+
+2. If else
+Syntax:
+	if(condition)
+	{
+		// Code
+	}
+	else
+	{
+		// Code
+	}
+
+--------------------------------
+
+3. If else if Ladder
+Syntax:
+// If you have to set multiple condition that use the 
+// If else if Ladder
+	if(condition)
+	{
+		// Code
+	}
+
+	else if
+	{
+		// Code
+	}
+
+	else if
+	{
+		// Code
+	}
+
+	else
+	{
+		// Code
+	}
+
+
+--------------------------------
+
+// Simple example for if condition
+class ifdemo
+{
+	public static void main(String []p)
+	{
+		int age = 18;
+		if(age>=18)
+		{
+			System.out.println("Eligible for vote");
+		}
+	}
+}
+
+--------------------------------
+
+// Simple example for if else condition
+class ifdemo
+{
+	public static void main(String []p)
+	{
+		int mark = 18;
+		if(mark>=40)
+		{
+			System.out.println("Pass!");
+		}
+		else
+		{
+			System.out.println("Fail!");
+		}
+		
+	}
+}
+
+--------------------------------
+
+// Simple example for if else if else condition
+class ifdemo
+{
+	public static void main(String []p)
+	{
+		int per = 90;
+
+		if(per >= 90)
+		{
+			System.out.println("Grade A");
+		}
+	
+		else if(per >=80)
+		{
+			System.out.println("Grade B");
+		}
+	
+		else if(per >=70)
+		{
+			System.out.println("Grade C");
+		}
+
+	
+		else if(per >=60)
+		{
+			System.out.println("Grade D");
+		}
+
+		else
+		{
+			System.out.println("Fail!");
+		}
+		
+	}
+}

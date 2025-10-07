@@ -1,0 +1,37 @@
+First i want to create an Website.
+
+Website should be for Company Introduction with the new technology and product selling manager.
+Company Name is JWH India Company. Make an Landing Page and starting page of our website. 
+
+First make an Background Framework. In this react component is apply to all the website's file's background. 
+Main Functionally:
+Layer 0: Background Color Scheme:
+Layer 1: Interactive Grid + Ripple
+Layer 2: 3D Visual Layer (Three.js)
+Layer 3: UI/Content/Buttons (Bootstrap layout)
+Layer 4: Animation Layer (Anime.js + GSAP)
+Layer 5: FX/UI Feedback (Hover, ripple, glow)
+
+
+Background Scheme:
+Gray:
+	
+#393939
+#5e5e5e
+#848484
+#a9a9a9
+#cecece
+#fcfcfc
+
+
+Gold:
+Make Five shades 
+
+White:
+Make Five shades
+
+Silver:
+Make Five shades.
+
+
+After the done of background framework display in dummy website to showcase the power of background framework in react.
