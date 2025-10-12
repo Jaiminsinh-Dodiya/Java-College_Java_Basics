@@ -1,0 +1,731 @@
+1. Interfaces and Classes
+
+
+Q1. Calculator Interface
+import java.util.Scanner;
+
+interface Calculator {
+    void add();
+    void subtract();
+    void multiply();
+    void divide();
+}
+
+class MyCalculator implements Calculator {
+    int a, b;
+
+    MyCalculator(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    public void add() {
+        System.out.println("Addition: " + (a + b));
+    }
+
+    public void subtract() {
+        System.out.println("Subtraction: " + (a - b));
+    }
+
+    public void multiply() {
+        System.out.println("Multiplication: " + (a * b));
+    }
+
+    public void divide() {
+        if (b != 0)
+            System.out.println("Division: " + (a / b));
+        else
+            System.out.println("Cannot divide by zero");
+    }
+}
+
+public class MainCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        int x = sc.nextInt();
+        System.out.print("Enter second number: ");
+        int y = sc.nextInt();
+        MyCalculator calc = new MyCalculator(x, y);
+        calc.add();
+        calc.subtract();
+        calc.multiply();
+        calc.divide();
+    }
+}
+
+
+
+
+
+Q2. Library Interface
+
+interface Library {
+    void issueBook();
+    void returnBook();
+}
+
+class MyLibrary implements Library {
+    public void issueBook() {
+        System.out.println("Book issued successfully.");
+    }
+
+    public void returnBook() {
+        System.out.println("Book returned successfully.");
+    }
+}
+
+public class MainLibrary {
+    public static void main(String[] args) {
+        MyLibrary lib = new MyLibrary();
+        lib.issueBook();
+        lib.returnBook();
+    }
+}
+
+
+
+
+Q3. Employee Interface
+
+import java.util.Scanner;
+
+interface Employee {
+    void getSalary();
+    void showSalary();
+}
+
+class MyEmployee implements Employee {
+    double salary;
+
+    public void getSalary() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter salary: ");
+        salary = sc.nextDouble();
+    }
+
+    public void showSalary() {
+        System.out.println("Salary: " + salary);
+    }
+}
+
+public class MainEmployee {
+    public static void main(String[] args) {
+        MyEmployee emp = new MyEmployee();
+        emp.getSalary();
+        emp.showSalary();
+    }
+}
+
+
+
+
+Q4. Vehicle Interface
+
+interface Vehicle {
+    void speed();
+}
+
+class Car implements Vehicle {
+    public void speed() {
+        System.out.println("Car speed: 120 km/h");
+    }
+}
+
+class Bike implements Vehicle {
+    public void speed() {
+        System.out.println("Bike speed: 80 km/h");
+    }
+}
+
+public class MainVehicle {
+    public static void main(String[] args) {
+        Vehicle v1 = new Car();
+        Vehicle v2 = new Bike();
+        v1.speed();
+        v2.speed();
+    }
+}
+
+
+
+2. Array Program
+
+Q5. Reverse Array
+
+public class ReverseArray {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        System.out.print("Reversed Array: ");
+        for(int i = arr.length - 1; i >= 0; i--){
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+
+
+Q6. Copy Array
+
+
+public class CopyArray {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 2, 3};
+        int[] arr2 = new int[arr1.length];
+        for(int i=0; i<arr1.length; i++){
+            arr2[i] = arr1[i];
+        }
+        System.out.print("Copied Array: ");
+        for(int num : arr2) System.out.print(num + " ");
+    }
+}
+
+
+
+Q7. Print Array using for-each
+
+
+public class PrintArray {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        for(int num : arr){
+            System.out.print(num + " ");
+        }
+    }
+}
+
+
+
+Q8. Sum of Array Elements
+
+
+public class SumArray {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int sum = 0;
+        for(int num : arr){
+            sum += num;
+        }
+        System.out.println("Sum: " + sum);
+    }
+}
+
+3. Loops and Numbers
+Q9. Even Numbers 1 to 50
+
+
+public class EvenNumbers {
+    public static void main(String[] args) {
+        int i=1;
+        while(i<=50){
+            if(i%2==0) System.out.print(i + " ");
+            i++;
+        }
+    }
+}
+
+
+
+Q10. Multiplication Table
+
+import java.util.Scanner;
+
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int n = sc.nextInt();
+        for(int i=1;i<=10;i++){
+            System.out.println(n + " x " + i + " = " + (n*i));
+        }
+    }
+}
+
+
+
+Q11. Factorial
+
+
+import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int n = sc.nextInt();
+        int fact = 1;
+        for(int i=1;i<=n;i++){
+            fact *= i;
+        }
+        System.out.println("Factorial: " + fact);
+    }
+}
+
+
+
+Q12. Sum of Digits
+
+import java.util.Scanner;
+
+public class SumOfDigits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int n = sc.nextInt();
+        int sum = 0;
+        while(n > 0){
+            sum += n % 10;
+            n /= 10;
+        }
+        System.out.println("Sum of digits: " + sum);
+    }
+}
+
+
+
+
+Q13. Reverse Number (do-while)
+
+import java.util.Scanner;
+
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int n = sc.nextInt();
+        int rev = 0;
+        do {
+            rev = rev*10 + n%10;
+            n /= 10;
+        } while(n > 0);
+        System.out.println("Reversed: " + rev);
+    }
+}
+
+
+
+
+4. Classes and Objects
+Q14. Student with Default Constructor
+
+
+public class Student {
+    int id;
+    String name;
+    Student() {
+        id = 1;
+        name = "Haresh";
+    }
+    void display() {
+        System.out.println("ID: " + id + ", Name: " + name);
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.display();
+    }
+}
+
+
+
+
+Q15. Employee with User Input
+
+
+import java.util.Scanner;
+
+public class Employee {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter ID: ");
+        int id = sc.nextInt();
+        System.out.print("Enter Name: ");
+        String name = sc.next();
+        System.out.println("Employee ID: " + id + ", Name: " + name);
+    }
+}
+
+
+
+Q16. Rectangle with Parameterized Constructor
+
+
+import java.util.Scanner;
+
+public class Rectangle {
+    int length, breadth;
+    Rectangle(int l, int b){
+        length = l;
+        breadth = b;
+    }
+    void area(){
+        System.out.println("Area: " + (length * breadth));
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter length: ");
+        int l = sc.nextInt();
+        System.out.print("Enter breadth: ");
+        int b = sc.nextInt();
+        Rectangle r = new Rectangle(l, b);
+        r.area();
+    }
+}
+
+
+
+
+5. Conditional Programs
+
+(All programs with Scanner input and full main class)
+
+Q17. Even or Odd
+
+
+import java.util.Scanner;
+
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+        if(num % 2 == 0)
+            System.out.println("Even");
+        else
+            System.out.println("Odd");
+    }
+}
+
+
+
+
+Q18. Leap Year
+
+import java.util.Scanner;
+
+public class LeapYear {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter year: ");
+        int year = sc.nextInt();
+        if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+            System.out.println("Leap Year");
+        else
+            System.out.println("Not Leap Year");
+    }
+}
+
+
+import java.util.Scanner;
+
+public class Marksheet {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter marks: ");
+        int marks = sc.nextInt();
+        if (marks >= 90)
+            System.out.println("Grade: A+");
+        else if (marks >= 80)
+            System.out.println("Grade: A");
+        else if (marks >= 70)
+            System.out.println("Grade: B+");
+        else if (marks >= 60)
+            System.out.println("Grade: B");
+        else if (marks >= 50)
+            System.out.println("Grade: C");
+        else
+            System.out.println("Grade: F");
+    }
+}
+
+
+
+Q20. Positive and Negative Check
+java
+Copy code
+
+
+import java.util.Scanner;
+
+public class PositiveNegative {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+        if(num > 0)
+            System.out.println("Positive");
+        else if(num < 0)
+            System.out.println("Negative");
+        else
+            System.out.println("Zero");
+    }
+}
+
+
+
+
+Q21. Eligible to Vote (age ≥ 18)
+java
+Copy code
+
+
+
+import java.util.Scanner;
+
+public class VotingEligibility {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter age: ");
+        int age = sc.nextInt();
+        if(age >= 18)
+            System.out.println("Eligible to vote");
+        else
+            System.out.println("Not eligible to vote");
+    }
+}
+
+
+
+
+Q22. Check Uppercase Character
+java
+Copy code
+
+
+import java.util.Scanner;
+
+public class UppercaseCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        char ch = sc.next().charAt(0);
+        if(Character.isUpperCase(ch))
+            System.out.println("Uppercase");
+        else
+            System.out.println("Not Uppercase");
+    }
+}
+
+
+
+Q23. Check Lowercase Character
+java
+Copy code
+
+import java.util.Scanner;
+
+public class LowercaseCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        char ch = sc.next().charAt(0);
+        if(Character.isLowerCase(ch))
+            System.out.println("Lowercase");
+        else
+            System.out.println("Not Lowercase");
+    }
+}
+
+
+Q24. Check String equals "Java"
+java
+Copy code
+
+
+import java.util.Scanner;
+
+public class StringCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String str = sc.next();
+        if(str.equals("Java"))
+            System.out.println("String matches Java");
+        else
+            System.out.println("String does not match");
+    }
+}
+
+
+
+Q25. Check String Length > 10
+java
+Copy code
+
+
+import java.util.Scanner;
+
+public class StringLengthCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String str = sc.next();
+        if(str.length() > 10)
+            System.out.println("String length is greater than 10");
+        else
+            System.out.println("String length is 10 or less");
+    }
+}
+
+
+
+Q26. Check if Number is Positive and Even
+java
+Copy code
+
+
+import java.util.Scanner;
+
+public class PositiveEvenCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+        if(num > 0 && num % 2 == 0)
+            System.out.println("Number is positive and even");
+        else
+            System.out.println("Number is not positive and even");
+    }
+}
+
+
+
+Q27. Smallest of Three Numbers
+java
+Copy code
+
+
+import java.util.Scanner;
+
+public class SmallestNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter three numbers: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int smallest = a;
+        if(b < smallest) smallest = b;
+        if(c < smallest) smallest = c;
+        System.out.println("Smallest number: " + smallest);
+    }
+}
+
+
+
+
+Q28. Month Number and Days
+java
+Copy code
+
+
+import java.util.Scanner;
+
+public class MonthDays {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter month number (1-12): ");
+        int month = sc.nextInt();
+        switch(month) {
+            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                System.out.println("31 days"); break;
+            case 4: case 6: case 9: case 11:
+                System.out.println("30 days"); break;
+            case 2:
+                System.out.println("28/29 days"); break;
+            default:
+                System.out.println("Invalid month"); break;
+        }
+    }
+}
+
+
+
+Q29. Check if Character is Space
+java
+Copy code
+
+
+import java.util.Scanner;
+
+public class SpaceCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        char ch = sc.next().charAt(0);
+        if(ch == ' ')
+            System.out.println("Character is a space");
+        else
+            System.out.println("Character is not a space");
+    }
+}
+
+
+
+Q30. Divisible by 2, 3, or Both
+java
+Copy code
+
+
+import java.util.Scanner;
+
+public class DivisibleCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+        if(num % 2 == 0 && num % 3 == 0)
+            System.out.println("Divisible by both 2 and 3");
+        else if(num % 2 == 0)
+            System.out.println("Divisible by 2");
+        else if(num % 3 == 0)
+            System.out.println("Divisible by 3");
+        else
+            System.out.println("Not divisible by 2 or 3");
+    }
+}
+
+
+
+Q31. Multiple of 4 and 6
+java
+Copy code
+
+
+import java.util.Scanner;
+
+public class MultipleOf4And6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+        if(num % 4 == 0 && num % 6 == 0)
+            System.out.println("Multiple of both 4 and 6");
+        else
+            System.out.println("Not a multiple of both 4 and 6");
+    }
+}
+
+
+
+Q32. Sum of Two Numbers is Even
+java
+Copy code
+
+import java.util.Scanner;
+
+public class SumEvenCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+        int sum = a + b;
+        if(sum % 2 == 0)
+            System.out.println("Sum is even");
+        else
+            System.out.println("Sum is odd");
+    }
+}
