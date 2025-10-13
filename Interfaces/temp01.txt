@@ -245,7 +245,6 @@ public class MultiplicationTable {
 
 Q11. Factorial
 
-
 import java.util.Scanner;
 
 public class Factorial {
@@ -280,8 +279,6 @@ public class SumOfDigits {
         System.out.println("Sum of digits: " + sum);
     }
 }
-
-
 
 
 Q13. Reverse Number (do-while)
