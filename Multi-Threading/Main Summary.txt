@@ -1,0 +1,9 @@
+Unit - Multi-Threading in Java
+
+What is Thread -> Thread is used to join some of the tasks somewhere. 
+
+Life-Cycle of thread -> 
+	Start
+	  |
+	  *
+	 Run
