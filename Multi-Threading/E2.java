@@ -4,7 +4,9 @@ class T extends Thread
 {
 	public void run()
 	{	
-		System.out.println("MSG from Thread extends class");
+		System.out.println("BCA");
+		System.out.println("Name : Jaiminsinh Dodiya");
+		System.out.println("Roll No : 06");
 	}
 }
 
