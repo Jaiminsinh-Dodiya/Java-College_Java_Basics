@@ -2,7 +2,6 @@
 // Program 01: Arithmetic Exception
 // java.lang.ArithmeticException : /Zero
 
-import java.io.*;
 class Example01
 {
 	public static void main(String d[])
